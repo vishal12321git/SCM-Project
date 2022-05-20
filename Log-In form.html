@@ -1,0 +1,132 @@
+<html>  
+<head>  
+<title> Validate the Password </title>  
+
+<!-- <link rel="stylesheet" type="text/css" href="style2.css"> -->
+</head>  
+<script>  
+function validateForm() {  
+    //collect form data in JavaScript variables  
+    var pw1 = document.getElementById("pswd1").value;  
+    // var pw2 = document.getElementById("pswd2").value;  
+    var name1 = document.getElementById("fname").value;  
+      
+      
+    //check empty first name field  
+    if(name1 == "") {  
+      document.getElementById("blankMsg").innerHTML = "**Fill the Username";  
+      return false;  
+    }  
+      
+    //character data validation  
+    if(!isNaN(name1)){  
+      document.getElementById("blankMsg").innerHTML = "**Only characters are allowed";  
+      return false;  
+    }  
+  
+   //character data validation  
+  
+    
+    //check empty password field  
+    if(pw1 == "") {  
+      document.getElementById("message1").innerHTML = "**Fill the password please!";  
+      return false;  
+    }  
+    
+    //check empty confirm password field  
+    // if(pw2 == "") {  
+    //   document.getElementById("message2").innerHTML = "**Enter the password please!";  
+    //   return false;  
+    // }   
+     
+    //minimum password length validation  
+    if(pw1.length < 8) {  
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+      return false;  
+    }  
+  
+    //maximum length of password validation  
+    if(pw1.length > 15) {  
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+      return false;  
+    }  
+    
+    // if(pw1 != pw2) {  
+    //   document.getElementById("message2").innerHTML = "**Passwords are not same";  
+    //   return false;  
+    // } else {  
+    //   alert ("Your password created successfully");  
+    //   document.write("Your Form has been successfully submitted");  
+    // }  
+ } 
+</script>  
+  <style type="text/css">
+    .container{
+      border-radius: 20px; /*margin: -500px 100px 10px 1090px; */height: 500px; width: 500px; 
+      text-align: center; }
+
+      #footer a {
+    font-style: auto;
+   
+    transition: all 500ms;
+    text-decoration: none;
+    color: black;
+}
+
+  </style>
+<body>
+  <!-- <span>
+
+  
+
+
+<beside>
+  <table  border="2" cellspacing="4" bordercolor="white" align="left" height="10%" width="90%" class="horizontal-list text-center">
+<tr>
+<td><img src="C:\Users\DELL\Documents\sbm.jpeg" height="100" width="150"></td>
+<td width="50px">     </td>
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/intro%20of%20project.html"><b>Home</b></a></td>
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/about.html"><b>About</b></a></td>
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/price.html"><b>Pricing</b></a></td>
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/Individual%20stocks.html"><b>Stocks</b></a></td>
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/partner.html"><b>Become Sub Broker</b></a></td> 
+
+<td><a href="file:///C:/Users/DELL/Desktop/CSS/projects3.html"><b>Stocks Exchanges</b></a></td>
+<td width="500px">  </td> 
+<td><button style="background-color:purple; border-radius:20px;"><a href="C:/Users/DELL/Desktop/CSS/livestocks.html"><b><font color=white >Live Stock Market</font></b></a></button></td>
+
+
+</tr>
+</table>
+</beside></span> -->
+
+  <!-- <img src="https://signup.zerodha.com/img/landing.1b95a104.png" height="500" width="600" style="margin-top: 100px; margin-left: 300px; ">
+   -->
+<div class="container">
+  
+<form onsubmit ="return validateForm()" style="background-color:#f4f4f8; border-radius:20px;">  
+  <h1 style="font-family: sans-serif ;">Login</h1><br>
+<!-- Enter first name -->  
+<td> Email* </td>  
+<input type = "text" id = "fname" value = "">   
+<span id = "blankMsg" style="color:red"> </span><br><br>  
+  
+<!-- <span id = "charMsg" style="color:red"> </span> <br><br>   -->
+<td>Password* </td>  
+<input type = "password" id = "pswd1" value = "">   
+<span id = "message1" style="color:red"> </span> <br><br>  
+  
+<!--Enter confirm password -->  
+<!-- <td> Confirm Password* </td>  
+<input type = "password" id = "pswd2" value = "">   
+<span id = "message2" style="color:red"> </span> <br><br>   -->
+<button type = "submit" value = "Submit" style="background-color: #387ed1; color:white ; height: 30; width: 130;font-size: 15px; font-family: sans-serif; border-radius: 5px; border-color: #387ed1;"> Submit   </button>
+  
+<!-- Click to reset fields -->  
+<button type = "reset" value = "Reset" style="background-color: #387ed1; color:white ; height: 30; width: 130; border-radius: 3px; border-color: #387ed1; font-size: 15px; font-family: sans-serif;">Reset</button>  
+</tr><br><br>
+</form>
+</div>
+
+</body>
+</html>
