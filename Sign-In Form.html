@@ -1,0 +1,219 @@
+<html>  
+<head>  
+<title> Validate the Password </title>  
+
+
+</head>  
+<script>  
+function validateForm() {  
+    //collect form data in JavaScript variables  
+    var pw1 = document.getElementById("pswd1").value;  
+    var pw2 = document.getElementById("pswd2").value;  
+    var name1 = document.getElementById("fname").value;  
+      
+      
+    //check empty first name field  
+    if(name1 == "") {  
+      document.getElementById("blankMsg").innerHTML = "**Fill the Username";  
+      return false;  
+    }  
+      
+    //character data validation  
+    if(!isNaN(name1)){  
+      document.getElementById("blankMsg").innerHTML = "**Only characters are allowed";  
+      return false;  
+    }  
+  
+   //character data validation  
+  
+    
+    //check empty password field  
+    if(pw1 == "") {  
+      document.getElementById("message1").innerHTML = "**Fill the password please!";  
+      return false;  
+    }  
+    
+    //check empty confirm password field  
+    if(pw2 == "") {  
+      document.getElementById("message2").innerHTML = "**Enter the password please!";  
+      return false;  
+    }   
+     
+    //minimum password length validation  
+    if(pw1.length < 8) {  
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+      return false;  
+    }  
+  
+    //maximum length of password validation  
+    if(pw1.length > 15) {  
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+      return false;  
+    }  
+    
+    if(pw1 != pw2) {  
+      document.getElementById("message2").innerHTML = "**Passwords are not same";  
+      return false;  
+    } else {  
+      alert ("Your password created successfully");  
+      document.write("Your Form has been successfully submitted");  
+    }  
+ }  
+ 
+</script>  
+  <style type="text/css">
+    .container{
+      border-radius: 20px;/* margin: -500px 100px 10px 1090px;*/ height: 500px; width: 500px; 
+      text-align: center; }
+      #footer a:hover {
+    font-size:20px;
+    font-size-adjust: 20px;
+}
+#footer a {
+    font-style: auto;
+   
+    transition: all 500ms;
+    text-decoration: none;
+    color: black;
+}
+
+
+  </style>
+<body>
+ 
+  
+  
+  
+<div class="container">
+  
+<form onsubmit ="return validateForm()" style="background-color:#f4f4f8; border-radius:20px;">  
+  <h1>Sign-In Form</h1><br>
+<!-- Enter first name -->  
+<td> Name* </td>  
+<input type = "text" id = "fname" value = "">   
+<span id = "blankMsg" style="color:red"> </span><br><br>  
+  
+<!-- <span id = "charMsg" style="color:red"> </span> <br><br>   -->
+<!-- <td><label for="account no.">Demant Account No.*</label> -->
+
+<!-- <input type="number" maxlength="16" minlength="16"> </td> -->
+
+<!-- </tr><br><br> -->
+
+<!-- <tr>     
+
+<td><label for="dob" >D.O.B</label>
+
+<input type="date"></td>
+
+</tr><br><br> -->
+
+<!-- <tr>
+
+<td><label for="account no.">Bank account no.*</label>
+
+<input type="number" maxlength="16"></td>
+
+</tr><br><br> -->
+
+<tr>
+<td><label for="email id">Email Id*</label>
+
+<input type="email id" placeholder="abc@gmail.com"></td>
+
+</tr><br><br>
+
+<tr>
+
+<td><label for="city">City</label>
+
+<input type="text" placeholder="Amritsar"></td>
+
+</tr><br><br>
+
+<tr>
+    
+    <td><label for="State">State</label>
+        
+        
+        <select name="State" placeholder="select">
+            <option value="select">select</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            
+            <option value="Assam">Assam</option>
+            <option value="Andaman And Nicobar Islands">Andaman And Nicobar Islands</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            
+            <option value="Daman And Diu And Dadra And Nagar Haveli">Daman And Diu And Dadra And Nagar Haveli</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu And Kashmir"> Jammu And Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Meghalya">Meghalya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+
+</select>
+</td>
+
+</tr><br><br>
+
+<tr>
+
+<td><label for="Country">Country</label>
+
+<input type="India" value="India" disabled>
+
+</tr><br><br>
+
+<tr> 
+
+<td><label for="Mobile No.">Mobile no.*</label>
+
+<input type="number" maxlength="10" placeholder="+91********" min="0"></td>
+
+</tr><br><br>
+<!-- Create a new password -->  
+<td> Create Password* </td>  
+<input type = "password" id = "pswd1" value = "">   
+<span id = "message1" style="color:red"> </span> <br><br>  
+  
+<!--Enter confirm password -->  
+<td> Confirm Password* </td>  
+<input type = "password" id = "pswd2" value = "">   
+<span id = "message2" style="color:red"> </span> <br><br>  
+  
+<!-- Click to verify valid password -->  
+<button type = "submit" value = "Submit" style="background-color: #387ed1; color:white ; height: 30; width: 130;font-size: 15px; font-family: sans-serif; border-radius: 5px; border-color: #387ed1;"> Submit   </button>
+  
+<!-- Click to reset fields -->  
+<button type = "reset" value = "Reset" style="background-color: #387ed1; color:white ; height: 30; width: 130; border-radius: 3px; border-color: #387ed1; font-size: 15px; font-family: sans-serif;">Reset</button>  
+</form>
+</div> <br><br><br><br><br><br>
+
+</body>  
+</html>
